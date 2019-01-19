@@ -1,0 +1,12 @@
+import re #importing regular expression module
+for i in range(int(input())): 
+   value = ''.join(input()) # variable "value" assertion
+   if re.match(r'[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}', value): # conditions for the credit card validation
+       value = value.replace('-','')
+   if re.search(r'^[456]', value) and len(value) == 16 and value.isdigit() and not re.search(r'(\d)\1\1\1', value): # searching through the conditions satisfaction.
+       print('Valid')
+   else:
+       print('Invalid')
+       
+      
+# reference google on usage of regex (regular expression)
