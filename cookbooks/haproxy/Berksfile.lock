@@ -1,0 +1,11 @@
+DEPENDENCIES
+  apache
+    path: ../apache
+  haproxy
+    path: .
+    metadata: true
+
+GRAPH
+  apache (0.3.3)
+  haproxy (0.3.1)
+    apache (>= 0.3.2)
